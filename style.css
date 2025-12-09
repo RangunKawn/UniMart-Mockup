@@ -1,0 +1,802 @@
+:root {
+            --primary-orange: #FFAA4C; /* Matches header */
+            --primary-dark: #333333;
+            --bg-light: #F8F9FA;
+            --card-white: #FFFFFF;
+            --text-grey: #6C757D;
+            --border-radius: 12px;
+            --image-placeholder: #F1F3F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kumbh Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--primary-dark);
+        }
+
+        /* --- Header Section --- */
+        header {
+            background-color: var(--primary-orange);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        /* Style for the new logo icon */
+        .logo-icon {
+            height: 24px; /* Adjust height to match text */
+            width: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .btn-sell {
+            background-color: white;
+            color: var(--primary-orange);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+        }
+
+        /* --- Main Container --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* --- Search Bar --- */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-wrapper input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            color: var(--primary-dark);
+        }
+
+        .search-wrapper i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid #ddd;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--primary-dark);
+        }
+
+        /* --- Categories Row --- */
+        .categories-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .categories-header h2 {
+            font-size: 1.4rem;
+            color: #1a202c;
+        }
+
+        .category-pills {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pill {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .pill.active {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+
+        .pill.inactive {
+            background-color: white;
+            color: var(--primary-dark);
+            border: 1px solid #eee;
+        }
+
+        /* --- Product Grid --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        /* --- Product Card --- */
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 16px;
+            border: 1px solid #eee;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card-img-placeholder {
+            background-color: var(--image-placeholder);
+            height: 180px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: #ced4da;
+            font-size: 2rem;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+
+        .tags {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Specific Tag Colors */
+        .tag-gray { background: #E9ECEF; color: #495057; }
+        .tag-orange { background: #FFF3E0; color: #E67E22; }
+        .tag-blue { background: #E3F2FD; color: #1976D2; }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #2D3436;
+        }
+
+        .add-cart-btn {
+            background-color: var(--primary-orange);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* --- Cart Page Specific Styles --- */
+
+.cart-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    min-height: 60vh; /* Gives it some height like the design */
+}
+
+.cart-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee; /* The top grey line */
+    margin-bottom: 30px;
+}
+
+/* Cart Item Row */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cart-image-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #D3D3D3; /* Light grey matching image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 0.9rem;
+    margin-right: 30px;
+    border-radius: 4px;
+}
+
+.cart-details {
+    flex-grow: 1;
+}
+
+.cart-details h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.cart-details p {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.cart-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Cart Footer Section */
+.cart-footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #eee; /* The bottom grey line */
+    display: flex;
+    justify-content: flex-end; /* Pushes content to the right */
+}
+
+.cart-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-count {
+    color: #888;
+    font-size: 1rem;
+}
+
+.total-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    margin-right: 10px;
+}
+
+.btn-checkout {
+    background-color: #FDD835; /* Specific yellow from screenshot */
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-checkout:hover {
+    background-color: #FBC02D; /* Slightly darker on hover */
+}
+
+/* --- My Listings Page Styles --- */
+
+.listings-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    min-height: 60vh;
+}
+
+.listings-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.listings-header-row h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+}
+
+.btn-add-new {
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-add-new:hover {
+    opacity: 0.9;
+}
+
+/* Listing Item Row */
+.listing-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.listing-item:last-child {
+    border-bottom: none;
+}
+
+.listing-image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--image-placeholder);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    color: #ced4da;
+    font-size: 1.5rem;
+}
+
+.listing-details {
+    flex-grow: 1;
+}
+
+.listing-details h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.listing-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.listing-meta .price {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.listing-meta .date {
+    color: #888;
+}
+
+/* Status Badges */
+.status-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-active {
+    background-color: #E8F5E9; /* Light Green */
+    color: #2E7D32;
+}
+
+.status-sold {
+    background-color: #E9ECEF; /* Light Gray */
+    color: #495057;
+}
+
+.status-pending {
+    background-color: #FFF3E0; /* Light Orange */
+    color: #E67E22;
+}
+
+/* Action Buttons */
+.listing-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-dark);
+    border-color: #ddd;
+}
+
+.action-btn.delete:hover {
+    background-color: #ffebee;
+    color: #c62828;
+    border-color: #ffcdd2;
+}
+
+/* --- Authentication Pages (Login/Register) --- */
+
+/* Special body class for auth pages to give full screen orange background */
+body.auth-body {
+    background-color: #FFC06E; /* Matches the orange in your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 400px; /* Controls the width of the card */
+    padding: 40px 40px 60px 40px; /* Extra bottom padding for space */
+    border-radius: 30px; /* Very rounded corners like the design */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-logo {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-logo-icon {
+    width: 60px;
+    height: auto;
+}
+
+.auth-logo h2 {
+    font-size: 2rem;
+    font-weight: 400; /* Lighter weight like the image */
+    color: black;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: #E9ECEF; /* Light grey input background */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px; /* Pill shape inputs */
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.input-group input:focus {
+    background-color: #DEE2E6;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--primary-orange);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-auth:hover {
+    opacity: 0.9;
+}
+
+.auth-footer {
+    margin-top: 30px;
+}
+
+.auth-footer a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* --- Sell Item Page Styles --- */
+
+.sell-container {
+    background: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    max-width: 800px; /* Limits width to keep form readable */
+    margin: 0 auto; /* Centers the form */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+/* Image Upload Styling */
+.image-upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    background-color: #fafafa;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.image-upload-box:hover {
+    border-color: var(--primary-orange);
+    background-color: #fffaf0;
+}
+
+.upload-label {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Make the label fill the box */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.upload-label i {
+    font-size: 3rem;
+    color: #bdbdbd;
+    margin-bottom: 15px;
+}
+
+.upload-label p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.upload-label span {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Form Layouts */
+.row-2-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sell-form select, 
+.sell-form textarea {
+    width: 100%;
+    background-color: #E9ECEF;
+    border: none;
+    border-radius: 12px; /* Matching your input style */
+    padding: 15px 20px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+    resize: vertical; /* Allows resizing textarea vertically only */
+}
+
+.sell-form select {
+    appearance: none; /* Removes default arrow to custom style if needed, but keeping simple for now */
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-submit-listing {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-submit-listing:hover {
+    opacity: 0.9;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #666;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.btn-cancel:hover {
+    color: black;
+}
+
+/* --- Dropdown Menu Styles --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+/* The actual menu container (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Positions it directly below the icon */
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin-top: 10px; /* Slight gap */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #fff3e0; /* Light orange background */
+    color: var(--primary-orange);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Add a tiny invisible bridge so the menu doesn't disappear when moving mouse to it */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: -15px;
+    left: 0;
+}

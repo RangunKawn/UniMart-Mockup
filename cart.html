@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/unimartlogo.png">
+    <title>My Cart - UniMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/unimartlogo.png" alt="UniMart Logo" class="logo-icon"> UniMart
+        </a>
+        <div class="nav-right">
+            <a href="sellitem.html" class="btn-sell">
+                <i class="fas fa-plus"></i> Sell Item
+            </a>
+            <a href="mylistings.html" class="nav-link"><i class="fas fa-list"></i> My Listings</a>
+            <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+            
+            <div class="dropdown">
+                <a href="#" class="nav-link" style="height: 100%; display: flex; align-items: center;">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="editaccount.html"><i class="fas fa-cog"></i> Edit Account</a>
+                    <a href="login.html" style="color: #e74c3c;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="cart-container">
+            <h1 class="cart-header">My Cart</h1>
+
+            <div class="cart-item">
+                <div class="cart-image-placeholder">Image</div>
+                <div class="cart-details">
+                    <h3>Calculus 2nd Edition</h3>
+                    <p>Used – Good Condition</p>
+                </div>
+                <div class="cart-price">RM 25.00</div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <span class="item-count">1 items</span>
+                    <span class="total-price">RM 25.00</span>
+                    <button class="btn-checkout">CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

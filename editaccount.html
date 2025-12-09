@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="unimartlogo.png">
+    <title>Edit Account - UniMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/unimartlogo.png" alt="UniMart Logo" class="logo-icon"> UniMart
+        </a>
+        <div class="nav-right">
+            <a href="sellitem.html" class="btn-sell">
+                <i class="fas fa-plus"></i> Sell Item
+            </a>
+            <a href="mylistings.html" class="nav-link"><i class="fas fa-list"></i> My Listings</a>
+            <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+            
+            <div class="dropdown">
+                <a href="#" class="nav-link" style="height: 100%; display: flex; align-items: center;">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="editaccount.html"><i class="fas fa-cog"></i> Edit Account</a>
+                    <a href="login.html" style="color: #e74c3c;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sell-container" style="max-width: 600px;"> <h1 class="page-title">Account Settings</h1>
+            
+            <form action="index.html" class="sell-form">
+                
+                <div class="form-section">
+                    <h3 style="margin-bottom: 20px; color: #333;">Profile Information</h3>
+                    
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" value="Nama Contoh" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Student Email</label>
+                        <input type="email" id="email" value="2020123456@student.uitm.edu.my" required>
+                    </div>
+                    
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+                <div class="form-section">
+                    <h3 style="margin-bottom: 20px; color: #333;">Change Password</h3>
+
+                    <div class="input-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" placeholder="••••••••">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" placeholder="New password">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm new password">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="index.html" class="btn-cancel">Cancel</a>
+                    <button type="submit" class="btn-submit-listing">Save Changes</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

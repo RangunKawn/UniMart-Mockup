@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/unimartlogo.png">
+    <title>UniMart - Campus Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/unimartlogo.png" alt="UniMart Logo" class="logo-icon"> UniMart
+        </a>
+        <div class="nav-right">
+            <a href="sellitem.html" class="btn-sell">
+                <i class="fas fa-plus"></i> Sell Item
+            </a>
+            <a href="mylistings.html" class="nav-link"><i class="fas fa-list"></i> My Listings</a>
+            <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+            
+            <div class="dropdown">
+                <a href="#" class="nav-link" style="height: 100%; display: flex; align-items: center;">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="editaccount.html"><i class="fas fa-cog"></i> Edit Account</a>
+                    <a href="login.html" style="color: #e74c3c;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    
+
+    <div class="container">
+
+        <div class="search-section">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search items...">
+                </div>
+                <div class="filter-btn">
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="categories-header">
+            <h2>All Items</h2>
+            <div class="category-pills">
+                <div class="pill active">All</div>
+                <div class="pill inactive">Electronics</div>
+                <div class="pill inactive">Books</div>
+                <div class="pill inactive">Furniture</div>
+            </div>
+        </div>
+
+        <div class="grid">
+            
+            <article class="card">
+                <div class="card-img-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <h3 class="card-title">Logitech Wireless Mouse</h3>
+                <div class="tags">
+                    <span class="tag tag-gray">Electronics</span>
+                    <span class="tag tag-orange">Used</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">RM30.00</span>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <h3 class="card-title">Calculus Textbook (8th Ed)</h3>
+                <div class="tags">
+                    <span class="tag tag-gray">Books</span>
+                    <span class="tag tag-orange">Like New</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">RM85.00</span>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <h3 class="card-title">IKEA Desk Lamp</h3>
+                <div class="tags">
+                    <span class="tag tag-gray">Furniture</span>
+                    <span class="tag tag-orange">Good</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">RM25.00</span>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <h3 class="card-title">Scientific Calculator</h3>
+                <div class="tags">
+                    <span class="tag tag-gray">Electronics</span>
+                    <span class="tag tag-orange">Used</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">RM45.00</span>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+</body>
+</html>

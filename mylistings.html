@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="unimartlogo.png">
+    <title>My Listings - UniMart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/unimartlogo.png" alt="UniMart Logo" class="logo-icon"> UniMart
+        </a>
+        <div class="nav-right">
+            <a href="sellitem.html" class="btn-sell">
+                <i class="fas fa-plus"></i> Sell Item
+            </a>
+            <a href="mylistings.html" class="nav-link"><i class="fas fa-list"></i> My Listings</a>
+            <a href="cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+            
+            <div class="dropdown">
+                <a href="editaccount.html" class="nav-link" style="height: 100%; display: flex; align-items: center;">
+                    <i class="far fa-user"></i>
+                </a>
+                <div class="dropdown-content">
+                    <a href="#"><i class="fas fa-cog"></i> Edit Account</a>
+                    <a href="login.html" style="color: #e74c3c;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="listings-container">
+            
+            <div class="listings-header-row">
+                <h2>My Listings</h2>
+                <button class="btn-add-new"><i class="fas fa-plus"></i> Add New</button>
+            </div>
+
+            <div class="listing-item">
+                <div class="listing-image-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <div class="listing-details">
+                    <h3>Calculus Textbook (8th Ed)</h3>
+                    <div class="listing-meta">
+                        <span class="price">RM85.00</span>
+                        <span class="date">Posted: Dec 01, 2025</span>
+                    </div>
+                    <span class="status-badge status-active">Active</span>
+                </div>
+                <div class="listing-actions">
+                    <a href="editlisting.html" class="action-btn edit" title="Edit" style="text-decoration: none;">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    <button class="action-btn delete" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="listing-item">
+                <div class="listing-image-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <div class="listing-details">
+                    <h3>Logitech Wireless Mouse</h3>
+                    <div class="listing-meta">
+                        <span class="price">RM30.00</span>
+                        <span class="date">Posted: Nov 28, 2025</span>
+                    </div>
+                    <span class="status-badge status-sold">Sold</span>
+                </div>
+                <div class="listing-actions">
+                    <a href="editlisting.html" class="action-btn edit" title="Edit" style="text-decoration: none;">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    <button class="action-btn delete" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+
+             <div class="listing-item">
+                <div class="listing-image-placeholder">
+                    <i class="far fa-image"></i>
+                </div>
+                <div class="listing-details">
+                    <h3>Lab Coat (Size M)</h3>
+                    <div class="listing-meta">
+                        <span class="price">RM15.00</span>
+                        <span class="date">Posted: Dec 05, 2025</span>
+                    </div>
+                    <span class="status-badge status-pending">Pending</span>
+                </div>
+                <div class="listing-actions">
+                    <a href="editlisting.html" class="action-btn edit" title="Edit" style="text-decoration: none;">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    <button class="action-btn delete" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
